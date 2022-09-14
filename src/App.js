@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import logo from "./assets/dank.png"
+import "./styles/nav.scss"
+import "./styles/app.scss"
 
 function App() {
+  const [isDark, setIsDark] = useState(false)
+  const [text, setText] = useState("") 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav>
+        <div className="logo">
+          <img src={logo} alt="apu dank" />
+          <h1>Lisp app</h1>
+        </div>
+      </nav>
+    </>
   );
 }
 
