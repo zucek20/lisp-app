@@ -1,3 +1,136 @@
 main {
-  
+  min-height: calc(100vh - 65px);
+  padding: 65px 5px 0 5px;
+
+  header {
+    text-align: center;
+    padding: 50px 5px;
+  }
+
+  .wrap {
+    max-width: 1200px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+
+    .heading {
+      display: flex;
+      justify-content: center;
+      h3 {
+        flex: 1;
+        text-shadow: none;
+        margin: 20px;
+      }
+    }
+
+    .app {
+      display: flex;
+      gap: 20px;
+
+      .firstWrap {
+        height: 0px;
+        flex: 1;
+        .buttonDiv {
+          display: flex;
+          justify-content: flex-end;
+          position: relative;
+
+          img.times {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 30px;
+            right: -10px;
+            cursor: pointer;
+            opacity: .6;
+            transition: opacity .2s;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+        textarea {
+          display: block;
+          margin: 20px;
+          border: 1px solid gray;
+          border-radius: 10px;
+          resize: none;
+          height: 350px;
+          font-size: 20px;
+          padding: 10px;
+          box-sizing: border-box;
+          font-family: Roboto, sans-serif;
+          padding-right: 50px;
+          width: 100%;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:first-child {
+            border: 1px solid gray;
+          }
+        }
+      }
+
+      .secondWrap {
+        flex: 1;
+
+        p {
+          box-sizing: border-box;
+          flex: 1;
+          margin: 20px;
+          border-radius: 10px;
+          height: 350px;
+          font-size: 20px;
+          padding: 10px;
+          font-weight: 400;
+        }
+
+        .buttonDiv {
+          display: flex;
+          justify-content: flex-end;
+          position: relative;
+          height: 0;
+
+          img {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: -60px;
+            right: 30px;
+            cursor: pointer;
+            opacity: .6;
+            transition: opacity .2s;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// media queries
+@media screen and (max-width: 700px) {
+  main {
+
+
+    .wrap {
+
+      .app {
+        flex-direction: column;
+
+        .firstWrap {
+
+          textarea {
+            width: 93%;
+          }
+        }
+      }
+    }
+  }
 }

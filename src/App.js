@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./styles/variables.scss"
 import "./styles/nav.scss"
 import "./styles/app.scss"
+import "./styles/main.scss"
+import "./styles/footer.scss"
 import logo from "./assets/dank.png"
 import moonWhite from "./assets/moon-white.svg"
 import copyBlack from "./assets/copy-black.svg"
@@ -49,10 +51,47 @@ function App() {
           <img src={isDark ? moonWhite : sunBlack} alt="icon" onClick={changeTheme}/>
         </div>
       </nav>
+      
       <main style={{
-        color: isDark ? "white" : "black"
+        color: isDark ? "white" : "black",
+        backgroundColor: isDark ? themes.dark1 : themes.light1,
       }}>
-        
+        <header>With this app, you can convert normal text to <b>lispy</b> text.</header>
+        <div className="wrap" style={{
+          backgroundColor: isDark ? themes.dark2 : themes.light2
+        }}>
+          
+          
+          <div className="app">
+            <div className="firstWrap">
+              <div className="buttonDiv">
+                {text ? 
+                <img className="times" src={isDark ? timesWhite : timesBlack} alt="times" title="Clear"/>
+                : null
+              }
+              </div>
+              <h3>Your input</h3>
+              <textarea placeholder="Type here..." id="input" style={{
+                backgroundColor: isDark ? themes.dark1 : "white",
+                color: isDark ? "white" : "black"
+              }}></textarea>
+            </div>
+            <div className="secondWrap">
+              <h3>Lispy text</h3>
+
+            <p id="output" style={{
+              backgroundColor: isDark ? themes.dark1 : "white",
+              color: isDark ? "white" : "black"
+            }}></p>
+            <div className="buttonDiv">
+              <img src={isDark ? copyWhite : copyBlack} alt="copy" title="Copy to clipboard"/>
+            </div>
+            </div>
+          </div>
+        </div>
+      <footer>
+        Paweł Izdebski 2022 &copy;
+      </footer>
       </main>
     </>
   );
