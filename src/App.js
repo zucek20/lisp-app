@@ -31,6 +31,49 @@ function App() {
     setIsDark(isDark => !isDark)
   }
 
+  function handleTimesClick() {
+    setText("")
+    document.getElementById("input").value = ""
+  }
+
+  // main algorithm
+  function handleInputChange(e) {
+    let unedited = e.target.value.split("")
+    const edited = unedited.map(letter => {
+      switch (letter) {
+        case "r":
+          return "l"
+          break;
+        case "ś":
+          return "s"
+          break
+        case "ź":
+          return "z"
+          break
+        case "ć":
+          return "c"
+        case "w":
+          return "f"
+          break
+        case "b":
+          return "p"
+          break
+          case "ł":
+          return "l"
+          break
+        default:
+          return letter
+      }}).join("").trim()
+    setText(edited)
+  }
+
+  // copy to clipboard
+  function copy() {
+    
+    navigator.clipboard.writeText(text)
+    alert("Copied to clipboard")
+  }
+
   return (
     <>
       <nav style={{
@@ -39,6 +82,10 @@ function App() {
         <div className="logo">
           <img src={logo} alt="apu dank" />
           <h1>Lisp app</h1>
+        </div>
+
+        <div className="logoMobile">
+          <h1>Lisp <br/>app</h1>
         </div>
 
         <div className="other">
@@ -51,7 +98,7 @@ function App() {
           <img src={isDark ? moonWhite : sunBlack} alt="icon" onClick={changeTheme}/>
         </div>
       </nav>
-      
+
       <main style={{
         color: isDark ? "white" : "black",
         backgroundColor: isDark ? themes.dark1 : themes.light1,
@@ -66,7 +113,7 @@ function App() {
             <div className="firstWrap">
               <div className="buttonDiv">
                 {text ? 
-                <img className="times" src={isDark ? timesWhite : timesBlack} alt="times" title="Clear"/>
+                <img onClick={handleTimesClick}className="times" src={isDark ? timesWhite : timesBlack} alt="times" title="Clear"/>
                 : null
               }
               </div>
@@ -74,7 +121,9 @@ function App() {
               <textarea placeholder="Type here..." id="input" style={{
                 backgroundColor: isDark ? themes.dark1 : "white",
                 color: isDark ? "white" : "black"
-              }}></textarea>
+              }}
+              onChange={handleInputChange}
+              ></textarea>
             </div>
             <div className="secondWrap">
               <h3>Lispy text</h3>
@@ -82,9 +131,9 @@ function App() {
             <p id="output" style={{
               backgroundColor: isDark ? themes.dark1 : "white",
               color: isDark ? "white" : "black"
-            }}></p>
+            }}>{text}</p>
             <div className="buttonDiv">
-              <img src={isDark ? copyWhite : copyBlack} alt="copy" title="Copy to clipboard"/>
+              <img className="copy" src={isDark ? copyWhite : copyBlack} alt="copy" title="Copy to clipboard" onClick={copy}/>
             </div>
             </div>
           </div>

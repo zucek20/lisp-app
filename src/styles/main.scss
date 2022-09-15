@@ -39,11 +39,11 @@ main {
             width: 20px;
             height: 20px;
             position: absolute;
-            top: 30px;
+            top: 70px;
             right: -10px;
             cursor: pointer;
-            opacity: .6;
-            transition: opacity .2s;
+            opacity: 0.6;
+            transition: opacity 0.2s;
 
             &:hover {
               opacity: 1;
@@ -65,7 +65,7 @@ main {
           width: 100%;
 
           &:focus {
-            outline: none;
+            outline: 1px solid gray;
           }
 
           &:first-child {
@@ -94,15 +94,15 @@ main {
           position: relative;
           height: 0;
 
-          img {
+          img.copy {
             width: 30px;
             height: 30px;
             position: absolute;
             top: -60px;
             right: 30px;
             cursor: pointer;
-            opacity: .6;
-            transition: opacity .2s;
+            opacity: 0.6;
+            transition: opacity 0.2s;
 
             &:hover {
               opacity: 1;
@@ -117,17 +117,22 @@ main {
 // media queries
 @media screen and (max-width: 700px) {
   main {
-
+    header {
+      padding: 30px 5px 0px;
+    }
 
     .wrap {
-
       .app {
         flex-direction: column;
 
         .firstWrap {
-
+          .buttonDiv {
+            img.times {
+              right: 25px;
+            }
+          }
           textarea {
-            width: 93%;
+            width: calc(100% - 35px);
           }
         }
       }
