@@ -133,7 +133,7 @@ function App() {
               }
               </div>
               <h3>Your input</h3>
-              <textarea placeholder="Type here..." id="input" style={{
+              <textarea spellcheck="false" placeholder="Type here..." id="input" style={{
                 backgroundColor: isDark ? themes.dark1 : "white",
                 color: isDark ? "white" : "black"
               }}
