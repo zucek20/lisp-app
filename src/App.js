@@ -45,22 +45,44 @@ function App() {
         case "r":
           return "l"
           break;
+        case "R":
+          return "L"
+          break;
         case "ś":
           return "s"
+          break
+        case "Ś":
+          return "S"
           break
         case "ź":
           return "z"
           break
+        case "Ź":
+          return "Z"
+          break
         case "ć":
           return "c"
+          break
+        case "Ć":
+          return "c"
+          break
         case "w":
           return "f"
+          break
+        case "W":
+          return "F"
           break
         case "b":
           return "p"
           break
+        case "B":
+          return "P"
+          break
           case "ł":
           return "l"
+          break
+        case "Ł":
+          return "L"
           break
         default:
           return letter
