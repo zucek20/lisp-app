@@ -3,8 +3,10 @@ main {
   padding: 65px 5px 0 5px;
 
   header {
-    text-align: center;
     padding: 50px 5px;
+    p {
+      text-align: center;
+    }
   }
 
   .wrap {
@@ -61,7 +63,7 @@ main {
           padding: 10px;
           box-sizing: border-box;
           font-family: Roboto, sans-serif;
-          padding-right: 50px;
+          padding-right: 40px;
           width: 100%;
 
           &:focus {
@@ -86,6 +88,7 @@ main {
           font-size: 20px;
           padding: 10px;
           font-weight: 400;
+          padding-right: 40px;
         }
 
         .buttonDiv {

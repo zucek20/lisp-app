@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Lisp App",
+  "name": "Lisp App. Convert text to lisp",
   "icons": [
     {
       "src": "favicon.ico",

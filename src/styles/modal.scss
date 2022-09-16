@@ -1,0 +1,26 @@
+div#modal {
+  position: fixed;
+  margin: 30px auto;
+  z-index: 2;
+  left: 50%;
+  width: 250px;
+  transform: translateX(-125px);
+  opacity: 0;
+  background-color: rgb(189, 255, 182);
+  border-radius: 10px;
+  border: 1px solid rgb(126, 255, 126);
+  padding: 20px 30px;
+  transition: .5s cubic-bezier(.55,1.54,.45,1.04);
+  
+  p {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+div#modal.active {
+  opacity: 1;
+  margin: 70px auto;
+  
+}

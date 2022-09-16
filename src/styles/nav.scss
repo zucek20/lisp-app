@@ -3,85 +3,88 @@
 nav {
   height: 65px;
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
+
   position: fixed;
   width: 100%;
+  z-index: 1;
 
-  div.logo {
-    display: flex;
-    flex: 1;
-    height: 100%;
-    width: 230px;
-    margin: auto;
-    justify-content: center;
-    
-    img {
-      height: 90%;
-      margin: 3px 10px;
-    } 
-
-    
-  }
-  .logoMobile {
-    display: none;
-
-    h1 {
-      display: none;
-    }
-  }
-
-  div.other {
+  .navWrap {
     display: flex;
     align-items: center;
-    a {
-      text-decoration: none;
-      color: black;
-      font-weight: 500;
-      transition: .2s;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    div.logo {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      width: 230px;
+      // justify-content: center;
 
-      
+      img {
+        height: 90%;
+        margin: 3px 10px;
+      }
     }
-    img {
-      display: block;
-      height: 40px;
-      margin: 0 10px;
-      background-color: none;
-      cursor: pointer;
-      transition: .2s;
-      padding: 3px;
-      border-radius: 50%;
+    .logoMobile {
+      display: none;
 
-      &:hover {
-        background-color: rgb(136, 136, 136);
+      h1 {
+        display: none;
+      }
+    }
+
+    div.other {
+      display: flex;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        transition: 0.2s;
+      }
+      img {
+        display: block;
+        height: 40px;
+        margin: 0 10px;
+        background-color: none;
+        cursor: pointer;
+        transition: 0.2s;
+        padding: 3px;
+        border-radius: 50%;
+
+        &:hover {
+          background-color: rgb(136, 136, 136);
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   nav {
-
-    justify-content: space-between;
-    .logo {
-      display: none;
-      img {
+    .navWrap {
+      .logo {
         display: none;
+        img {
+          display: none;
+        }
+        h1 {
+          display: none;
+        }
       }
-      h1 {
-        display: none;
-      }
-    }
 
-    .logoMobile {
-      display: block;
-      flex: 1;
-      
-      h1 {
-      display: block;
-      font-size: 30px;
-      line-height: 30px;
-      transform: translateY(-5px);
+      .logoMobile {
+        display: block;
+        position: fixed;
+        left: 5px;
+
+        h1 {
+          display: block;
+          font-size: 30px;
+          line-height: 30px;
+          transform: translateY(-5px);
+        }
       }
     }
   }
