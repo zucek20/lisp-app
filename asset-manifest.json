@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/lisp-app/static/css/main.42ba4896.css",
+    "main.js": "/lisp-app/static/js/main.2e581f02.js",
+    "static/media/sun-black.svg": "/lisp-app/static/media/sun-black.6895467f08a85d979cc51ce11f3f55d3.svg",
+    "static/media/copy-black.svg": "/lisp-app/static/media/copy-black.6f7486bc718da6180028eff592cc2ac2.svg",
+    "static/media/copy-white.svg": "/lisp-app/static/media/copy-white.eaf75b2e828d3058cbe406b64dd5be74.svg",
+    "index.html": "/lisp-app/index.html",
+    "static/media/moon-white.svg": "/lisp-app/static/media/moon-white.097f948ff2760f6b24434bc11c700a7a.svg",
+    "static/media/times-white.svg": "/lisp-app/static/media/times-white.f7ab20edd963bbca9a0e671c8bf4957d.svg",
+    "static/media/times-black.svg": "/lisp-app/static/media/times-black.e1adc1917c01c2ca9385ad55d5f50772.svg",
+    "main.42ba4896.css.map": "/lisp-app/static/css/main.42ba4896.css.map",
+    "main.2e581f02.js.map": "/lisp-app/static/js/main.2e581f02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42ba4896.css",
+    "static/js/main.2e581f02.js"
+  ]
+}
